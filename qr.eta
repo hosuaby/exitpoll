@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @page {
+            margin: 0;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 4cm;
+            height: 4cm;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <% it.imgLinks.forEach(function(chunk) { %>
+    <tr>
+        <% chunk.forEach(function(qr) { %>
+        <td>
+            <img src="<%= qr %>" />
+            <div>http://voteabroad.info</div>
+        </td>
+        <% }) %>
+    </tr>
+    <% }) %>
+</table>
+</body>
+</html>
