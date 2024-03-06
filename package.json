@@ -13,7 +13,6 @@
     "url": "git+https://github.com/hosuaby/exitpoll.git"
   },
   "dependencies": {
-    "build-url-ts": "^6.1.7",
     "eta": "^3.2.0",
     "lodash": "^4.17.21",
     "nanoid": "^3.3.7",

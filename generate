@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# Get directory of this script
+SCRIPT=`realpath -s $0`
+BASEDIR=`dirname $SCRIPT`
+
+mkdir -p out/codes
+mkdir -p out/png
+mkdir -p out/pages
+
+bureau=$1
+nbCodes=$2
+
+line=$(cat $BASEDIR/data/baselinks.csv | awk 'BEGIN { FS = "," } { if ($1=='"$bureau"') print $2 " " $3 }')
+
+IFS=' ' read -ra ADDR <<< "$line"
+
+city=${ADDR[0]}
+baseUrl=${ADDR[1]}
+
+codesFile="${BASEDIR}/out/codes/${bureau}.${city}.txt"
+node dist/generate-pin-codes.js "${nbCodes}" > "${codesFile}"
+cat "${codesFile}" | node dist/qr.js "${baseUrl}" entry.1240140900 "png/${bureau}" "${bureau}.${city}.html"

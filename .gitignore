@@ -2,7 +2,3 @@
 node_modules
 dist
 out
-*.txt
-*.png
-!logo.png
-*.html
