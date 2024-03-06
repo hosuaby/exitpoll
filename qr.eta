@@ -2,19 +2,18 @@
 <html>
 <head>
     <style>
-        @page {
-            margin: 0;
-        }
-
         table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
         }
 
         td {
-            width: 4cm;
-            height: 4cm;
+            width: 5cm;
             text-align: center;
+        }
+
+        img {
+            width: 100%;
         }
     </style>
 </head>

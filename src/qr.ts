@@ -39,7 +39,7 @@ r1.on('line', async (pin: string) => {
     const pinImageFile = `${pngOutDir}/${pin}.png`;
     pinImages.push(`../${pngOutDirName}/${pin}.png`);
 
-    await QRCode.toFile(pinImageFile, fullUrl, { margin: 2 });
+    await QRCode.toFile(pinImageFile, fullUrl);
 });
 
 r1.on('close', () => {
