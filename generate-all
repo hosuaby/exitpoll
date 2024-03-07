@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Get directory of this script
+SCRIPT=`realpath -s $0`
+BASEDIR=`dirname $SCRIPT`
+
+NB_CODES=1000
+
+cat $BASEDIR/data/bureaux.csv \
+| awk 'BEGIN { FS = "," } { print $1 }' \
+| xargs -I {} $BASEDIR/generate {} "${NB_CODES}"

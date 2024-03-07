@@ -24,7 +24,7 @@
         <% chunk.forEach(function(qr) { %>
         <td>
             <img src="<%= qr %>" />
-            <div>http://voteabroad.info</div>
+            <div>voteabroad.info</div>
         </td>
         <% }) %>
     </tr>
