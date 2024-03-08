@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="200px" src="logo.png" />
+  <img width="200px" src="mishanya.gif" />
 </p>
 
 # Скрипт для обработки данных с QR кодов для Экзитпола 2024
